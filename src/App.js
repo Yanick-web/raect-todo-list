@@ -93,14 +93,14 @@ getLocalItems()
 
   //SAVE AND RETRIEVE FROM LOCAL STORAGE
   const saveToLocal = ()=>{
-    if(localStorage.getItem("todolist") === null){
-      localStorage.setItem("todolist", JSON.stringify([]));
-    }else{
       localStorage.setItem("todolist", JSON.stringify(todos));
-    }
+  
   }
  
   const getLocalItems = ()=> {
+    if(localStorage.getItem("todolist") === null){
+      localStorage.setItem("todolist", JSON.stringify([]));
+    }
    let items = JSON.parse(localStorage.getItem("todolist"));
    setTodos(items);
   }
