@@ -23,10 +23,11 @@ ul{
 }
 
 #todo_item{
-  border: 1px solid black;
+  border: none;
+  border-radius: 5px;
   display: flex;
   justify-content: space-between;
-  padding: .1rem;
+  padding: 3px;
   margin-top: 20px;
   overflow: hidden;
   background-color: white;
@@ -37,5 +38,57 @@ ul{
 }
 
 #delete{
+  background-color:crimson;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  color: #ffffff;
+}
+
+#delete:hover{
   background-color: red;
+}
+input[type="submit"]{
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  margin: 5px;
+}
+
+input[type= "submit"]:hover{
+  background-color: aqua;
+}
+
+input[type= "text"]{
+  padding: 5px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+}
+
+input[type="text"]:focus, #filters:focus{
+  border: 1px solid aqua;
+}
+
+#mark{
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+}
+#mark:hover{
+  background-color: aqua;
+}
+
+#filters{
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
 }

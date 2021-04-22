@@ -91,9 +91,9 @@ window.alert("Input is empty. Please enter a todo");
   return (
     <div className="App">
     <form onSubmit={handleSubmit}>
-      <label htmlFor="todo_text">Enter a todo</label>
+      <label htmlFor="todo_text">Enter a todo: </label>
       <input type="text" name="todo_text" value={input} onChange={handleInput}/>
-      <input type="submit" value="Add(+)" />
+      <input type="submit" value="Add" />
 
       <select id="filters" name="filters" onChange={handleFilter}>
         <option value="all" defaultValue>All</option>
