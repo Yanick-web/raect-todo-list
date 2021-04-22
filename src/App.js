@@ -65,7 +65,12 @@ window.alert("Input is empty. Please enter a todo");
 };
 
 
-const filterItems = () => {
+
+  //SAVE AND RETRIEVE FROM LOCAL STORAGE
+
+
+  useEffect(() => {
+    const filterItems = () => {
   switch(filter){
     case "completed":
       setFiltered(todos.filter(el => el.done === true));
@@ -78,32 +83,9 @@ const filterItems = () => {
       break;
   }
 }
-
- useEffect(()=>{
-getLocalItems()
-  }, []);
-
-
-  useEffect(() => {
-    saveToLocal()
     filterItems();
 
   }, [ filter, todos]);
-
-
-  //SAVE AND RETRIEVE FROM LOCAL STORAGE
-  const saveToLocal = ()=>{
-      localStorage.setItem("todolist", JSON.stringify(todos));
-  
-  }
- 
-  const getLocalItems = ()=> {
-    if(localStorage.getItem("todolist") === null){
-      localStorage.setItem("todolist", JSON.stringify([]));
-    }
-   let items = JSON.parse(localStorage.getItem("todolist"));
-   setTodos(items);
-  }
 
 
   return (
